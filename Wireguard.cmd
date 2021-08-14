@@ -17,7 +17,7 @@ SET WGPATH="C:\Program Files\WireGuard"
 
 :MENU
 echo =================================
-%WGPATH%\wg show|find "wg1" > NUL
+%WGPATH%\wg show|find "%INTERFACE%" > NUL
 IF ERRORLEVEL 1 ( echo Wireguard tunnel is %ESC%[91mDOWN%ESC%[0m ) else ( echo Wireguard tunnel is %ESC%[92mUP%ESC%[0m )
 echo.
 echo 1 - Enable Tunnel
